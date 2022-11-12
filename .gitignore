@@ -1,6 +1,6 @@
 node_modules 
 package-lock.json
+albumsSeeds.js
+artistsSeeds.js
+genreSeeds.js
 .env
-# albumsSeeds.js
-# artistsSeeds.js
-# genreSeeds.js

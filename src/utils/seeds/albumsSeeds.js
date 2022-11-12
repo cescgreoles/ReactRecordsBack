@@ -1,7 +1,8 @@
 const { mongoose } = require("mongoose");
 const Album = require("../../api/albums/albums.model");
 
-const DB_URL = process.env.DB_URL;
+const DB_URL =
+  "mongodb+srv://root:root@cluster0.bmcfgi8.mongodb.net/music-app?retryWrites=true&w=majority";
 
 const albums = [
   {
