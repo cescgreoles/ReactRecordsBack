@@ -1,0 +1,36 @@
+// mongoose
+// .connect(DB_URL)
+// .then(async () => {
+// const allAlbums = await Album.find().lean();
+
+// if (!allAlbums.length) {
+// console.log("[seed]: No se encuentran albumes, continuo...");
+// } else {
+// console.log(`[seed]: Encontrados ${allAlbums.length} jugadores.`);
+// await Album.collection.drop();
+// console.log("[seed]: Colección Albums eliminada correctamente");
+// }
+
+// })
+// .catch((error) =>
+// console.log("[seed]: Error eliminando la colección -->", error)
+// )
+// .then(async () => {
+// for (const album of albums) {
+// const artist = album.artist;
+// const artistId = await Artist.findOne({ name: artist }).lean();
+// album.artist = artistId.\_id.toString();
+// }
+
+// for (const album of albums) {
+// const genre = album.genre;
+// const genreId = await Genre.findOne({ name: genre }).lean();
+// album.genre = genreId.\_id.toString();
+// }
+
+// await Album.insertMany(albums);
+// console.log(`[seed]: ${albums.length} nuevos albumes añadidos con éxito`);
+
+// })
+// .catch((error) => console.log("[seed]: Error añadiendo los albums", error))
+// .finally(() => mongoose.disconnect());
