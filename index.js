@@ -8,6 +8,7 @@ const indexRoutes = require("./src/api/index/index.routes");
 const albumsRoutes = require("./src/api/albums/albums.routes");
 const genresRoutes = require("./src/api/genres/genres.routes");
 const artistsRoutes = require("./src/api/artists/artists.routes");
+const usersRoutes = require("./src/api/users/users.routes");
 
 db.connectDb();
 
@@ -34,6 +35,7 @@ server.use("/", indexRoutes);
 server.use("/albums", albumsRoutes);
 server.use("/artists", artistsRoutes);
 server.use("/genres", genresRoutes);
+server.use("/users", usersRoutes);
 
 server.use("", (req, res) => {
   return res.status(404).json("Ruta no encontrada");

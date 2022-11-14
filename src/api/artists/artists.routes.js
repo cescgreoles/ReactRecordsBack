@@ -1,15 +1,19 @@
 const express = require("express");
 const Artist = require("./artists.model");
 const router = express.Router();
+const { isAuth, isAdmin } = require("../../middlewares/auth");
 
-router.get("/", async (req, res) => {
-  try {
-    const allArtists = await Artist.find();
-    return res.status(200).json(allArtists);
-  } catch (error) {
-    return res.status(500).json("Error al leer los deportes");
+router.get(
+  "/",
+  /*[isAuth],*/ async (req, res) => {
+    try {
+      const allArtists = await Artist.find();
+      return res.status(200).json(allArtists);
+    } catch (error) {
+      return res.status(500).json("Error al leer los deportes");
+    }
   }
-});
+);
 
 router.get("/:id", async (req, res, next) => {
   try {
